@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+
+\title{Speciation in digital organisms}
+\author{Carlos Anderson}
+
+\begin{document}
+
+\maketitle
+
+% Double-spaced
+\baselineskip 24pt
+
+
+This blog post is a follow up to one I wrote last year
+about my research on speciation with digital organisms.
+%
+One of my projects tested the hypothesis that
+compensatory adaptation---an evolutionary process
+in which secondary mutations can reduce
+the negative effects of accumulated deleterious mutations---%
+can lead to hybrid inviability,
+a form of reproductive isolation, between populations.
+%
+Using digital organisms, I showed that hybrids
+between compensated populations inherited combinations
+of deleterious and compensatory mutations,
+which turned out to be incompatible with each other
+%
+Over the past year, I have been working on complementing
+my work with digital organisms with yeast cells.
+%
+
+
+Two big questions in speciation are
+(1) can speciation proceed even if environments are similar to each other,
+and (2) can speciation proceed when migration between populations occurs?
+%
+I wanted to study speciation in an artificial life system,
+where my findings could be generalized to life as we don't know it.
+
+
+
+Searching for Ph.D. programs in 2006, I found Michigan State University,
+where a team of scientists and students have been developing Avida.
+%
+Avida is an artificial life software
+designed to study questions in evolution and ecology.
+%
+In Avida, digital organisms consist of a sequence of instructions (or `genome')
+that encodes their ability to replicate and perform computational functions.
+%
+The precise sequence of instructions that
+allow organisms to perform functions
+evolve through natural selection and genetic drift,
+two evolutionary processes that occur in biological organisms.
+%
+With Avida, one can observe millions of generations
+of evolution in a short period of time,
+perform many replications, easily manipulate genomes,
+and accurately record measurements like fitness and events like mutations.
+
+
+
+One of my studies addresses whether speciation
+can occur when environments are similar between populations.
+%
+One hypothesis is that speciation can happen by compensatory adaptation,
+in which a deleterious mutation rises in frequency in a population
+and is subsequently compensated by secondary mutations.
+%
+Imagine that two populations become divided
+and each undergoes the process of compensatory adaptation.
+%
+If the populations were now to come into contact,
+their hybrids would inherit a combination of
+deleterious and compensatory mutations,
+which, because they evolved independently,
+may not be compatible with each other
+and possibly cause inviability or sterility.
+%
+I found this hybrid incompatibility in Avida,
+and it wasn't simply because hybrids inherited
+deleterious mutations, but also because
+compensatory mutations between populations were incompatible.
+%
+These findings show that compensatory adaptation is
+one way in which speciation can occur when
+the external environment does not change.
+
+
+UPDATE: STARTED YEAST EXPERIMENTS
+
+
+
+Another of my studies tests the effect of
+migration between diverging populations on the probability of speciation.
+%
+I evolved populations that had to
+adapt to a new environment while
+migration between them occurred.
+%
+Although the environments were new,
+I had treatments in which the two environments
+were different from each other
+and in which they were the same.
+%
+I found that when the environments are different,
+migration does not prevent speciation from starting%
+---even at 10\% migration.
+%
+However, when the environments are the same,
+even 1\% migration prevents speciation.
+%
+It appears that when the environments are the same,
+the population that adapts to it first
+and lets an individual migrate to the other population,
+effectively gives away its solution.
+%
+This causes both populations to adapt similarly,
+preventing reproductive isolation between them.
+
+
+UPDATE: MORE FINE-SCALED EXPERIMENTS
+- found that at very low migration rates < 1\% isolation occurs in MO
+- higher dimensional environments promotes isolation
+- fine-scaled recombination exposes genetic coadapted complexes
+
+
+Perhaps discuss snowball effect research
+
+
+
+\end{document}
