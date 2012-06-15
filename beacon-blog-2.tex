@@ -18,115 +18,157 @@ One of my projects tested the hypothesis that
 compensatory adaptation---an evolutionary process
 in which secondary mutations can reduce
 the negative effects of accumulated deleterious mutations---%
-can lead to hybrid inviability,
-a form of reproductive isolation, between populations.
+causes hybrid inviability between populations,
+a form of reproductive isolation that may lead to speciation.
 %
 Using digital organisms, I showed that hybrids
 between compensated populations inherited combinations
-of deleterious and compensatory mutations,
-which turned out to be incompatible with each other
+of deleterious and compensatory mutations
+that turned out to be incompatible in the hybrid.
 %
+This incompatibility arose because
+the full combination of deleterious and compensatory mutations
+from either parent were not always present in the hybrid,
+causing a mismatch between deleterious and compensatory mutations.
+
+
+
 Over the past year, I have been working on complementing
-my work with digital organisms with yeast cells.
+my digital work with biological organisms, specifically, the budding yeast.
 %
-
-
-Two big questions in speciation are
-(1) can speciation proceed even if environments are similar to each other,
-and (2) can speciation proceed when migration between populations occurs?
+Yeast are unicellular fungi,
+known primarily for their use in brewing and baking,
+but have also been used extensively in scientific research.
 %
-I wanted to study speciation in an artificial life system,
-where my findings could be generalized to life as we don't know it.
-
-
-
-Searching for Ph.D. programs in 2006, I found Michigan State University,
-where a team of scientists and students have been developing Avida.
+Using common techniques in yeast genetics,
+I deleted certain genes from yeast that
+caused their growth rate to slow down,
+simulating the effects of deleterious mutations.
 %
-Avida is an artificial life software
-designed to study questions in evolution and ecology.
+Currently, I am allowing populations of yeast
+with these deleterious mutations to evolve separately,
+so that each population acquires compensatory mutations
+independently of other such populations.
 %
-In Avida, digital organisms consist of a sequence of instructions (or `genome')
-that encodes their ability to replicate and perform computational functions.
+After 500 generations (they are currently at around 50),
+I will hybridize different populations
+and measure the growth rate of the hybrids.
 %
-The precise sequence of instructions that
-allow organisms to perform functions
-evolve through natural selection and genetic drift,
-two evolutionary processes that occur in biological organisms.
+If I find that hybrids are less fit than their parents,
+I will also be able to tease apart the interactions
+between deleterious or compensatory mutations
+that cause incompatibilities.
 %
-With Avida, one can observe millions of generations
-of evolution in a short period of time,
-perform many replications, easily manipulate genomes,
-and accurately record measurements like fitness and events like mutations.
-
-
-
-One of my studies addresses whether speciation
-can occur when environments are similar between populations.
-%
-One hypothesis is that speciation can happen by compensatory adaptation,
-in which a deleterious mutation rises in frequency in a population
-and is subsequently compensated by secondary mutations.
-%
-Imagine that two populations become divided
-and each undergoes the process of compensatory adaptation.
-%
-If the populations were now to come into contact,
-their hybrids would inherit a combination of
-deleterious and compensatory mutations,
-which, because they evolved independently,
-may not be compatible with each other
-and possibly cause inviability or sterility.
-%
-I found this hybrid incompatibility in Avida,
-and it wasn't simply because hybrids inherited
-deleterious mutations, but also because
-compensatory mutations between populations were incompatible.
-%
-These findings show that compensatory adaptation is
-one way in which speciation can occur when
-the external environment does not change.
-
-
-UPDATE: STARTED YEAST EXPERIMENTS
+If I find such incompatibilities,
+this work would not only show that reproductive isolation
+can form via compensatory adaptation,
+but it would also support the utility of digital organisms
+in evolutionary research.
 
 
 
-Another of my studies tests the effect of
-migration between diverging populations on the probability of speciation.
+In another study using digital organisms,
+I tested whether speciation could proceed
+in the face of migration between populations.
 %
-I evolved populations that had to
-adapt to a new environment while
-migration between them occurred.
+I also tested whether differences in environments
+between populations promoted or constrained speciation.
 %
-Although the environments were new,
-I had treatments in which the two environments
-were different from each other
-and in which they were the same.
+I found that when the environments were different,
+reproductive isolation developed even at
+high migration rates of 10\%.
 %
-I found that when the environments are different,
-migration does not prevent speciation from starting%
----even at 10\% migration.
+When the environments were the same, however,
+even 1\% migration prevented reproductive isolation.
 %
-However, when the environments are the same,
-even 1\% migration prevents speciation.
+The reason was that when the environments were the same,
+any beneficial mutations in one population
+that were transferred to the other population through migration
+were also adaptive in the other population.
 %
-It appears that when the environments are the same,
-the population that adapts to it first
-and lets an individual migrate to the other population,
-effectively gives away its solution.
-%
-This causes both populations to adapt similarly,
+This caused both populations to adapt similarly,
 preventing reproductive isolation between them.
 
 
-UPDATE: MORE FINE-SCALED EXPERIMENTS
-- found that at very low migration rates < 1\% isolation occurs in MO
-- higher dimensional environments promotes isolation
-- fine-scaled recombination exposes genetic coadapted complexes
+
+Since those experiments, I have added two
+variables that may affect reproductive isolation:
+dimensionality and type of hybridization.
+%
+Dimensionality describes the number of selective pressures
+in an environment.
+%
+It has been hypothesized that adaptation
+to multiple selective pressures may increase divergence
+between populations, and thus increase the probability
+of genetic incompatibilities.
+%
+To test this hypothesis, I evolved populations
+under both low and high dimensionality,
+where the environments could be the same or different
+between the populations (as in the previous experiments).
+%
+I found that, indeed, populations that adapted to a highly
+dimensional environment produced hybrids that were less fit
+than hybrids produced by populations adapted to few dimensions.
 
 
-Perhaps discuss snowball effect research
+
+The other variable I added was the type of hybridization.
+%
+Originally, hybrids were created by exchanging
+a single, contiguous region of a random size from the parental genomes.
+%
+Thus, hybrids often inherited complete sets of
+tightly-linked coadapted genetic regions from each parent,
+hiding potential incompatibilities between populations.
+%
+In an attempt to expose these coadapted genetic regions,
+I added a hybridization method in which every site of the genome
+could potentially recombine, thereby increasing the number
+of recombination break points.
+%
+Whereas with the original hybridization method
+populations that adapted to similar environments
+did not form as strong reproductive isolation
+as populations that adapted to different environments
+(when there was no migration between populations),
+the new hybridization method caused both treatments%
+---same environments and different environments---%
+to show similar levels of reproductive isolation.
+%
+These results show that genetic incompatibilities
+can form even when populations adapt to the same environment.
+
+
+
+Finally,
+using digital organisms I explored a hypothesis
+related to the formation of genetic incompatibilities.
+%
+As I have discussed,
+when a population becomes geographically divided into two,
+each population evolves independently of the other,
+so that genetic incompatibilities may form.
+%
+Genetic incompatibilties may cause hybrids to be inviable,
+which is a form of reproductive isolation (i.e., speciation).
+%
+One theoretical prediction of this process
+posits that the number of genetic incompatibilities
+involving two alleles should increase quadratically through time
+(the so-called 'snowball effect').
+%
+This prediction is very difficult to test with biological organisms
+because a lot of genetic manipulations would have to be performed.
+%
+Using digital organisms, I tested the snowball effect
+and found that pairwise incompatibilities do increase quadratically
+through time.
+%
+But I also found the presence of 'buffer' alleles in hybrids
+that lessen the fitness effect of these incompatibilities,
+showing that more complex interactions may explain hybrid inviability.
 
 
 
